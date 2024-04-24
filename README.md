@@ -1,4 +1,4 @@
-# JupyterLab Desktopのインストール
+# JupyterLab Desktopインストールマニュアル
 
 JupyterLab Desktopは修正BSDライセンスで公開している**オープンソース・ソフトウェア**です。
 
@@ -34,7 +34,7 @@ Jupyter Lab Desktopの[Github](https://github.com/jupyterlab/jupyterlab-desktop?
 
 ２．設定画面に移動
 
-続いて、下記の画面になると思いますが、図で示した通りに順番で設定画面に移動します。
+続いて、下記の画面になりますが、図で示した通りに順番で設定画面に移動します。
 
 <div aligh='center'>
 <img src='https://drive.google.com/uc?export=view&id=1OetPeNhNWNdBXDjgh9dONfcMuDat1jZj', width='50%'>
@@ -52,6 +52,8 @@ Jupyter Lab Desktopの[Github](https://github.com/jupyterlab/jupyterlab-desktop?
 <div aligh='center'>
 <img src='https://drive.google.com/uc?export=view&id=1OLHKia4pVcC3x1Rk2vPp7clF-C5RDeKF', width='50%'>
 </div>
+
+これで、再起動すると、`New Notebook`を選択すると、カーネルでpython3が選択できるようになり、pythonの実行できる環境になります。
 
 ## ４．日本語化
 
@@ -78,15 +80,52 @@ JupyterLab Desktopは、日本語に対応していますが、マニュアル�
 
 ４．再起動後、`New Notebook`を開き、下記のように`Settings`->`Language`->`Japanese`を選ぶことで、メニュー画面が日本語化されます。
 
-![08](https://github.com/dgod1028/Tohoku_PBL/assets/16339858/4faa2786-9974-453d-8706-92cd7e1ad681)
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/ee8ac285-ef62-4d04-8f3c-f4002866cbfd' width='70%'>
 
-## ５．最終確認
+## ５．環境確認
 
 `New Notebook`を開き、コードを実行して、python環境がちゃんとインストールされていることを確認します。
 
-![11](https://github.com/dgod1028/Tohoku_PBL/assets/16339858/74ded377-3044-4a3a-8716-d3757e8cdd9d | width=50)
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/74ded377-3044-4a3a-8716-d3757e8cdd9d' width='70%'>
 
 
 - (オプション）左のファイルブラウザで、好きなフォルダやファイル作成が可能です。
 
-![10](https://github.com/dgod1028/Tohoku_PBL/assets/16339858/4e7df92f-a51f-41fc-9a5b-5a249b3e9cb2)
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/4e7df92f-a51f-41fc-9a5b-5a249b3e9cb2' width='70%'>
+
+## ６．モジュールのインストール
+
+１．ランチャーからターミナルを起動します。
+<div aligh='center'>
+<img src='https://drive.google.com/uc?export=view&id=1OqLbcFwmRWZpV1D0dkmtkqEQQ-7W9hw8', width='50%'>
+</div>
+
+２．ターミナルで`pip`コマンドを活用して、インストールしたいモジュールをインストールしてください。下記は可視化ツール`seaborn`をインストールする例です。
+
+<div aligh='center'>
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/2a6a0d63-08aa-4eff-932d-2e6f9dd311f8', width='70%'>
+</div>
+
+３．インストール後は、`Notebook`で新たなモジュールを使うことが可能です。
+
+<div aligh='center'>
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/c2606f43-ac31-460e-9e69-ab7a5009d816', width='70%'>
+</div>
+
+
+## ７．Pytorchのインストール
+
+深層学習モジュールの`Pytorch`をインストールする際に、<font color='crimson'>GPUが使えるかどうかによって手順が少し異なります。</font>
+
+基本的には[pytorchのホームページ](https://pytorch.org/get-started/locally/)から、自分の環境に適している選択を行えば、最後に`Run this Command`で提示されたコマンドをコピーし、前項のモジュールのインストールと同様な方法で`pytorch`をインストールすることができます。
+
+<div aligh='center'>
+<img src='https://github.com/dgod1028/Tohoku_PBL/assets/16339858/3613120b-a96d-4a4c-9845-1e7e9cf7ae69', width='70%'>
+</div>
+
+注意点として、GPUがないパソコンでは`Compute Platform`で、`cpu`に選択する必要があります。また、GPUを使いたい場合（また、パソコンにもGPUが使える場合）、選択したCUDAと同じバージョンを別途インストールする必要があります。
+
+必要なCUDAのバージョンは、自身のパソコンのGPUで利用可能かどうかの確認したうえで、インストールしてください。（例：[CUDA12.1のサイト](https://developer.nvidia.com/cuda-12-1-0-download-archive)）
+
+
+
